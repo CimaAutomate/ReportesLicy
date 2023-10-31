@@ -32,6 +32,7 @@
   <ItemGroup>
     <Compile Include="Reports\ImpresionesPorMunicipioReport.cs" />
     <Compile Include="Reports\ImpresionesPorMunicipioReport.Designer.cs" />
+    <Compile Include="Reports\ReportsFactory.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Data\nwind.db">

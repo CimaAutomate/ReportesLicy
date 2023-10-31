@@ -43,9 +43,7 @@ namespace LicyReportingSystem
                 if(WebHostEnvironment.IsDevelopment())
                     configurator.UseDevelopmentMode();
                 
-                configurator.ConfigureReportDesigner(designerConfigurator => {
-                    designerConfigurator.RegisterObjectDataSourceWizardTypeProvider<ObjectDataSourceWizardCustomTypeProvider>();
-                });
+
                 configurator.ConfigureWebDocumentViewer(viewerConfigurator => {
                     viewerConfigurator.UseCachedReportSourceBuilder();
                     viewerConfigurator.RegisterConnectionProviderFactory<CustomSqlDataConnectionProviderFactory>();
@@ -95,7 +93,6 @@ namespace LicyReportingSystem
             
             app.UseRouting();
 
-            DevExpress.Utils.DeserializationSettings.RegisterTrustedClass(typeof(LicyReportingSystem.Employees.DataSourceTest));
 
             app.UseDevExpressControls();
             System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
@@ -109,17 +106,17 @@ namespace LicyReportingSystem
                     pattern: "{controller}/{action=Index}/{id?}");
             });
             
-            //app.UseSpa(spa => {
-            //    // To learn more about options for serving an Angular SPA from ASP.NET Core,
-            //    // see https://go.microsoft.com/fwlink/?linkid=864501
+            app.UseSpa(spa => {
+               // To learn more about options for serving an Angular SPA from ASP.NET Core,
+                // see https://go.microsoft.com/fwlink/?linkid=864501
 
-            //    spa.Options.SourcePath = "ClientApp";
+                spa.Options.SourcePath = "ClientApp";
 
-            //    if (env.IsDevelopment()) {
-            //        spa.UseAngularCliServer(npmScript: "start");
-            //        spa.Options.StartupTimeout = TimeSpan.FromSeconds(240);
-            //    }
-            //});
+                if (env.IsDevelopment()) {
+                    spa.UseAngularCliServer(npmScript: "start");
+                    spa.Options.StartupTimeout = TimeSpan.FromSeconds(240);
+                }
+            });
 
 
         }
