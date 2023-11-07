@@ -43,6 +43,9 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\ImpresionesPorMunicipioReport.resx" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\DataSource\DataSource.csproj" />
   </ItemGroup>
 

@@ -4,7 +4,6 @@ using DevExpress.AspNetCore;
 using DevExpress.AspNetCore.Reporting;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -22,10 +21,11 @@ using System.Reflection;
 namespace LicyReportingSystem
 {
     public class Startup {
+
         public Startup(IConfiguration configuration, IWebHostEnvironment webHostEnvironment) {
             Configuration = configuration;
             WebHostEnvironment = webHostEnvironment;
-            RegisterAllSafeReportDataSources();
+            //RegisterAllSafeReportDataSources();
         }
 
         public IConfiguration Configuration { get; }
@@ -61,15 +61,15 @@ namespace LicyReportingSystem
             services.AddDbContext<ReportDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("ReportsDataConnectionString")));
 
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy("DevelopmentPolicy", builder =>
-                {
-                    builder.AllowAnyOrigin()
-                           .AllowAnyMethod()
-                           .AllowAnyHeader();
-                });
-            });
+            //services.AddCors(options =>
+            //{
+            //    options.AddPolicy("DevelopmentPolicy", builder =>
+            //    {
+            //        builder.AllowAnyOrigin()
+            //               .AllowAnyMethod()
+            //               .AllowAnyHeader();
+            //    });
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -105,14 +105,16 @@ namespace LicyReportingSystem
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
             });
-            
-            app.UseSpa(spa => {
-               // To learn more about options for serving an Angular SPA from ASP.NET Core,
+
+            app.UseSpa(spa =>
+            {
+                // To learn more about options for serving an Angular SPA from ASP.NET Core,
                 // see https://go.microsoft.com/fwlink/?linkid=864501
 
                 spa.Options.SourcePath = "ClientApp";
 
-                if (env.IsDevelopment()) {
+                if (env.IsDevelopment())
+                {
                     spa.UseAngularCliServer(npmScript: "start");
                     spa.Options.StartupTimeout = TimeSpan.FromSeconds(240);
                 }

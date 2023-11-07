@@ -26,14 +26,11 @@ export class ReportViewerComponent implements AfterViewInit {
     
 
     constructor() {
-      this.hostUrl = environment.API_URL
+        this.hostUrl = environment.API_URL
 
     }
 
     ngAfterViewInit() {
-
-        debugger
-        console.log("hola")
 
 
     }
