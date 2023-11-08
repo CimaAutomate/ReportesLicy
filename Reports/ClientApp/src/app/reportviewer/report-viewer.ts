@@ -20,6 +20,6 @@ export class ReportViewerComponent {
 
     constructor(@Inject('BASE_URL') hostUrl: string) {
 
-        this.hostUrl = hostUrl
+        this.hostUrl = environment.API_URL;
     }
 }

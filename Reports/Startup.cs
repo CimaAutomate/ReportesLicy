@@ -44,11 +44,34 @@ namespace Reports {
                     viewerConfigurator.RegisterConnectionProviderFactory<CustomSqlDataConnectionProviderFactory>();
                 });
                 configurator.UseAsyncEngine();
+
+
             });
+
+            services.AddCors(options => {
+                options.AddPolicy(name: "AllowAll",
+                                  policy => {
+                                      policy.AllowAnyOrigin()
+                                            .AllowAnyMethod()
+                                            .AllowAnyHeader();
+                                  });
+            });
+
             services.AddSpaStaticFiles(configuration => {
                 configuration.RootPath = "ClientApp/dist";
             });
             services.AddDbContext<ReportDbContext>(options => options.UseSqlite(Configuration.GetConnectionString("ReportsDataConnectionString")));
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("DevelopmentPolicy", builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -68,28 +91,38 @@ namespace Reports {
             if (!env.IsDevelopment()) {
                 app.UseSpaStaticFiles();
             }
-            
+
+
             app.UseRouting();
             
             app.UseDevExpressControls();
             System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
+
+            if( env.IsDevelopment())
+                app.UseCors("DevelopmentPolicy");
+
             app.UseEndpoints(endpoints => {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
             });
-            
-            app.UseSpa(spa => {
-                // To learn more about options for serving an Angular SPA from ASP.NET Core,
-                // see https://go.microsoft.com/fwlink/?linkid=864501
 
-                spa.Options.SourcePath = "ClientApp";
+            if (env.IsDevelopment())
+            {
+                app.UseCors("AllowAll");
+            }
 
-                if (env.IsDevelopment()) {
-                    spa.UseAngularCliServer(npmScript: "start");
-                    spa.Options.StartupTimeout = TimeSpan.FromSeconds(240);
-                }
-            });
+            //app.UseSpa(spa => {
+            //    // To learn more about options for serving an Angular SPA from ASP.NET Core,
+            //    // see https://go.microsoft.com/fwlink/?linkid=864501
+
+            //    spa.Options.SourcePath = "ClientApp";
+
+            //    if (env.IsDevelopment()) {
+            //        spa.UseAngularCliServer(npmScript: "start");
+            //        spa.Options.StartupTimeout = TimeSpan.FromSeconds(240);
+            //    }
+            //});
         }
 
         public static void RegisterAllSafeReportDataSources()
