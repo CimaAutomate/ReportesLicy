@@ -28,6 +28,9 @@
     <None Remove="Reports\**" />
   </ItemGroup>
   <ItemGroup>
+    <Content Remove="wwwroot\Images\logo_chihuahua.png" />
+  </ItemGroup>
+  <ItemGroup>
     <None Remove="Data\nwind.db" />
     <None Remove="Data\reportsData.db" />
   </ItemGroup>
@@ -51,6 +54,9 @@
     <Content Update="Data\nwind.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="wwwroot\Images\logo_chihuahua.png" />
   </ItemGroup>
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
     <!-- Ensure Node.js is installed -->

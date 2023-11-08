@@ -16,25 +16,36 @@ namespace DataSource.Datasources.Impresiones
 
         private List<ImpresionesPorMunicipio> GenerateDummyData()
         {
+
+            var fechaCaptrua1 = DateTime.Now.Date;
+            var fechaCaptrua2 = DateTime.Now.AddDays(-1).Date;
+            var fechaCaptrua3 = DateTime.Now.AddDays(-2).Date;
+            var fechaCaptrua4 = DateTime.Now.AddDays(-3).Date;
+
+            var fechaPago1 = DateTime.Now.AddDays(1).Date;
+            var fechaPago2 = DateTime.Now.AddDays(2).Date;
+
             List<ImpresionesPorMunicipio> listaImpresiones = new List<ImpresionesPorMunicipio>
                 {
+
                     // Municipio 1, 4 registros
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 100, FechaDeCaptura = DateTime.Now.AddDays(-1), FechaDePago = DateTime.Now.AddDays(1) },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 150, FechaDeCaptura = DateTime.Now.AddDays(-1), FechaDePago = DateTime.Now.AddDays(2) },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 200, FechaDeCaptura = DateTime.Now, FechaDePago = DateTime.Now.AddDays(3) },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 250, FechaDeCaptura = DateTime.Now, FechaDePago = DateTime.Now.AddDays(4) },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 100, FechaDeCaptura = fechaCaptrua1, FechaDePago = fechaPago1 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 150, FechaDeCaptura = fechaCaptrua1, FechaDePago = fechaPago1 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 200, FechaDeCaptura = fechaCaptrua2, FechaDePago = fechaPago2 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 250, FechaDeCaptura = fechaCaptrua2, FechaDePago = fechaPago2
+    },
 
                     // Municipio 2, 4 registros
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 300, FechaDeCaptura = DateTime.Now.AddDays(-2), FechaDePago = DateTime.Now.AddDays(5) },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 350, FechaDeCaptura = DateTime.Now.AddDays(-2), FechaDePago = DateTime.Now.AddDays(6) },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 400, FechaDeCaptura = DateTime.Now.AddDays(-1), FechaDePago = DateTime.Now.AddDays(7) },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 450, FechaDeCaptura = DateTime.Now.AddDays(-1), FechaDePago = DateTime.Now.AddDays(8) },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 300, FechaDeCaptura = fechaCaptrua1, FechaDePago = fechaPago1 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 350, FechaDeCaptura = fechaCaptrua2, FechaDePago = fechaPago1 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 400, FechaDeCaptura = fechaCaptrua3, FechaDePago = fechaPago2 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 450, FechaDeCaptura = fechaCaptrua4, FechaDePago = fechaPago2 },
 
                     // Municipio 3, 4 registros
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 500, FechaDeCaptura = DateTime.Now.AddDays(-3), FechaDePago = DateTime.Now.AddDays(9) },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 550, FechaDeCaptura = DateTime.Now.AddDays(-3), FechaDePago = DateTime.Now.AddDays(10) },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 600, FechaDeCaptura = DateTime.Now, FechaDePago = DateTime.Now.AddDays(11) },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 650, FechaDeCaptura = DateTime.Now, FechaDePago = DateTime.Now.AddDays(12) }
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 500, FechaDeCaptura = fechaCaptrua1, FechaDePago = fechaPago1 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 550, FechaDeCaptura = fechaCaptrua2, FechaDePago = fechaPago1 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 600, FechaDeCaptura = fechaCaptrua3, FechaDePago = fechaPago2 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 650, FechaDeCaptura = fechaCaptrua4, FechaDePago = fechaPago2 }
                 };
 
                         return listaImpresiones;
