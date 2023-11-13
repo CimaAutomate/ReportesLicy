@@ -23,6 +23,7 @@ a.navbar-brand {
     background: var(--dark-purple);
     align-items: center;
     z-index: 19;
+    height: 7vh;
   }
 
   .down-nav{
@@ -37,7 +38,7 @@ a.navbar-brand {
   
 
   .drawer-custom{
-    height: 90vh;
+    height: 93vh;
   }
 
   .no-padding{

@@ -13,7 +13,7 @@ export class AppComponent {
   isExpanded = false;
 
   collapse() {
-    this.isExpanded = false;
+    this.isExpanded = false; 
   }
 
   toggle() {
@@ -33,8 +33,8 @@ export class AppComponent {
       };
       
       this.navigation = [
-        { id: 1, text: "Inbox", icon: "folder", path: "/impresion" },
-        { id: 2, text: "Sent Mail", icon: "folder", path: "/otro" }
+        { id: 1, text: "Reportes de impresión", icon: "folder", path: "/impresion" },
+        { id: 2, text: "Reportes de seguridad", icon: "folder", path: "/otro" }
 
       ];
 

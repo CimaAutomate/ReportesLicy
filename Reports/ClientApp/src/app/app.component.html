@@ -9,11 +9,12 @@
 
 
 <dx-drawer
-class="drawer-custom"
-template="template"
-[(opened)]="isOpened"
-openedStateMode = "shrink"
-revealMode="expand"
+  class="drawer-custom"
+  template="template"
+  [(opened)]="isOpened"
+  openedStateMode = "shrink"
+  revealMode="expand"
+
 >
 <div *dxTemplate="let data of 'template'">
   <h4 class="side-title" >Menú</h4>
