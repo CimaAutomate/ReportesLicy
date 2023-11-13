@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+@import '~devextreme/dist/css/dx.light.css';
+
+
+:root {
+    --dark-blue: #5d2854;
+    --dark-purple: #7A306C;
+    --medium-purple: #A23078;
+    --gray-purple: #634055;
+    --light-purple: #947b88;
+    --pink-active: #b2419d;
+    --very-light-pink: rgb(244, 238, 241);
+
+      /* Textos */
+    --titulo-texto: var(--dark-blue); /* Texto de título */
+    --cuerpo-texto: var(--gray-purple); /* Texto normal o cuerpo */
+    --texto-atenuado: var(--light-purple); /* Texto menos prominente o atenuado */
+    --texto-activo: var(--medium-purple); /* Texto activo o destacado */
+
+    /* Detalles y Decoración */
+    --detalle-color: var(--dark-blue); /* Color para detalles como íconos o elementos pequeños */
+    
+    /* Fondo y Bordes */
+    --fondo-principal: var(--medium-purple); /* Color de fondo principal */
+    --borde-color: #ccc; /* Color de bordes para componentes, etc. */
+
+
+  }
+
+  
+  h1,h2,h3,h4,h5,h6{
+    color: var(--titulo-texto);
+  }
+  

@@ -1,4 +1,31 @@
-<app-nav-menu></app-nav-menu>
-<div class="container-fluid">
-  <router-outlet></router-outlet>
-</div>
+
+<nav
+  class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow upper-nav"
+>
+
+    <h3 class="logo-text">Reportes</h3>
+</nav>
+
+
+
+<dx-drawer
+class="drawer-custom"
+template="template"
+[(opened)]="isOpened"
+openedStateMode = "shrink"
+revealMode="expand"
+>
+<div *dxTemplate="let data of 'template'">
+  <h4 class="side-title" >Menú</h4>
+    <dx-list
+        [items]="navigation"
+        [selectedIndex]="0"
+        [width]="300"
+        selectionMode="single"
+        (onSelectionChanged)="loadView($event)">
+    </dx-list>
+    </div>
+      <div id="view">
+        <router-outlet></router-outlet>
+    </div>
+</dx-drawer>
