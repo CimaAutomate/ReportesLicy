@@ -2,10 +2,21 @@
 <nav
   class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow upper-nav"
 >
-
     <h3 class="logo-text">Reportes</h3>
 </nav>
-
+<div
+class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow down-nav py-0"
+>
+  <dx-toolbar 
+    id="toolbar" 
+  >
+    <dxi-item 
+        widget="dxButton"
+        [options]="buttonOptions"
+        location="before">
+    </dxi-item>
+    </dx-toolbar>
+</div>
 
 
 <dx-drawer
@@ -18,11 +29,20 @@ revealMode="expand"
 <div *dxTemplate="let data of 'template'">
   <h4 class="side-title" >Menú</h4>
     <dx-list
-        [items]="navigation"
-        [selectedIndex]="0"
+        [items]="navigtion"
         [width]="300"
         selectionMode="single"
-        (onSelectionChanged)="loadView($event)">
+        >
+              <div *dxTemplate="let link of 'links'">
+                <a [routerLink]="['/' + link.path]">
+                    <div>
+                        <div class="dx-list-item-icon-container">
+                            <i class="dx-icon dx-list-item-icon dx-icon-{{link.icon}}"></i>
+                        </div>
+                        <span>{{ link.text }}</span>
+                    </div>
+                </a>
+            </div>
     </dx-list>
     </div>
       <div id="view">

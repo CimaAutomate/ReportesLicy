@@ -31,11 +31,14 @@ import { DxDrawerModule, DxListModule, DxToolbarModule } from 'devextreme-angula
     RouterModule.forRoot([
       { path: '', redirectTo: '/impresion', pathMatch: 'full' },
       {
-        path: 'impresion/:reporte',
-        component: ReportesDeImpresionComponent
+        path: 'impresion/:reporte', component: ReportesDeImpresionComponent
       },
+      {
+        path: 'impresion', component: ReportesDeImpresionComponent
+      }
     ])
   ],
+
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -20,7 +20,7 @@ export class AppComponent {
     this.isExpanded = !this.isExpanded;
   }
 
-  navigation: any;
+  navigtion: any;
   isOpened: Boolean = true;
   buttonOptions: any;
 
@@ -31,14 +31,36 @@ export class AppComponent {
               this.isOpened = !this.isOpened;
           }
       };
-      this.navigation = [
-          { id: 1, text: "Reportes de impresión", icon: "folder", filePath: "/impresion", selected:true }
+      
+      this.navigtion = [
+        { id: 1, text: "Reportes de impresión", icon: "message", path: "impresion" },
+        { id: 2, text: "Reportes de seguridad", icon: "check", path: "impresion" }
 
       ];
+      
+
+
+      //this.selectDefault();
+
   }
 
-  loadView(e) {
-      this.router.navigate([e.addedItems[0].filePath])
+  private selectDefault(){
+    document.addEventListener('DOMContentLoaded', () => {
+      const primerElemento = document.querySelector('.dx-list .dx-list-item');
+      if (primerElemento) {
+        // Crea un nuevo evento de clic
+        var event = new MouseEvent('click', {
+          'view': window,
+          'bubbles': true,
+          'cancelable': true
+        });
+        // Despacha el evento en el primer elemento
+        primerElemento.dispatchEvent(event);
+      }
+    });
   }
+
+
+  
 }
 

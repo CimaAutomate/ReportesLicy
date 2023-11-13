@@ -25,13 +25,13 @@ export class ReportViewerComponent {
 
 
     constructor(@Inject('BASE_URL') hostUrl: string, private route: ActivatedRoute, private router: Router) {
-
+      console.log('report viewer lodaded');
         this.hostUrl = environment.API_URL;
     }
 
 
   ngOnInit() {
-
+    console.log('report viewer init');
     this.route.paramMap.subscribe(params => {
       let reportUrl = params.get('reporte');
       
@@ -45,6 +45,7 @@ export class ReportViewerComponent {
   }
 
   private navigateToDefault() {
+    console.log('navigating to default');
     this.router.navigate([this.reportsParentRoute, this.reportes[0].link]);
   }
 
