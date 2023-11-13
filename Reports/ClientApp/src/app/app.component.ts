@@ -20,7 +20,7 @@ export class AppComponent {
     this.isExpanded = !this.isExpanded;
   }
 
-  navigtion: any;
+  navigation: any;
   isOpened: Boolean = true;
   buttonOptions: any;
 
@@ -32,15 +32,13 @@ export class AppComponent {
           }
       };
       
-      this.navigtion = [
-        { id: 1, text: "Reportes de impresión", icon: "message", path: "impresion" },
-        { id: 2, text: "Reportes de seguridad", icon: "check", path: "impresion" }
+      this.navigation = [
+        { id: 1, text: "Inbox", icon: "folder", path: "/impresion" },
+        { id: 2, text: "Sent Mail", icon: "folder", path: "/otro" }
 
       ];
-      
 
-
-      //this.selectDefault();
+      this.selectDefault();
 
   }
 
@@ -60,7 +58,10 @@ export class AppComponent {
     });
   }
 
-
+  loadView(e) {
+    var route = e.addedItems[0].path;
+    this.router.navigate([route])
+  }
   
 }
 
