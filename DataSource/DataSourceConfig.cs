@@ -1,11 +1,4 @@
-﻿using DataSource.Common.Attributes;
-using DataSource.Datasources.Impresiones;
-using DataSource.Repositories;
-using DataSource.Repositories.Base;
-using Microsoft.Extensions.DependencyInjection;
-using System.Reflection;
-
-namespace Microsoft.Extensions.DependencyInjection
+﻿namespace Microsoft.Extensions.DependencyInjection
 {
     public class DataSourceConfig
     {

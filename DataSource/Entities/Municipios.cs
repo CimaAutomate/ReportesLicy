@@ -10,7 +10,6 @@ namespace DataSource.Entities
     {
         public int IdMunicipio { get; set; }
         public string Nombre { get; set; }
-        public string Destino { get; set; }
 
     }
 }
