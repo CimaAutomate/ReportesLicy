@@ -21,7 +21,6 @@ namespace Microsoft.Extensions.DependencyInjection
 
         private static void ConfigureRepositoriesInyection (IServiceCollection services)
         {
-            services.AddScoped<IMunicipiosRepository, MunicipiosRepository>();
         }
 
     }

@@ -8,19 +8,26 @@ using System.Threading.Tasks;
 
 namespace DataSource.Repositories
 {
-    public interface IMunicipiosRepository : IRepository
-    { 
-        Task<List<Municipios>> GetAll();
-
-
-
-    }
-
-    public class MunicipiosRepository: IMunicipiosRepository
+    public class MunicipiosRepository
     {
-        public Task<List<Municipios>> GetAll()
+        public List<Municipios> GetAll()
         {
-            throw new NotImplementedException();
+            return GetDummnyMunicipios();
         }
+
+        public static List<Municipios> GetDummnyMunicipios()
+        {
+            return DummyMunicipios;
+
+        }
+
+        public static List<Municipios> DummyMunicipios = new List<Municipios>
+            {
+                new Municipios{ IdMunicipio = 1, Nombre = "Municipio 1" },
+                new Municipios{ IdMunicipio = 2, Nombre = "Municipio 2" },
+                new Municipios{ IdMunicipio = 3, Nombre = "Municipio 3" },
+                new Municipios{ IdMunicipio = 4, Nombre = "Municipio 4" },
+                new Municipios{ IdMunicipio = 5, Nombre = "Municipio 5" }
+            };
     }
 }
