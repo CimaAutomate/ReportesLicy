@@ -1,9 +1,10 @@
 <div class="report-viewer-container">
   <div class="sidebar box-shadow">
-    <h4 class="my-3 mx-auto" >{{title}}</h4>
+    <h4 class="my-3 mx-auto">{{title}}</h4>
     <ul>
       <li *ngFor="let report of reportes">
-        <a [href]="reportsParentRoute + '/' + report.link"
+        <!-- Cambiar [href] por [routerLink] -->
+        <a [routerLink]="[reportsParentRoute, report.link]"
            [class.active]="selectedReport?.link === report.link">
           <span class="dx-icon dx-icon-tags link-icon"></span> {{ report.name }}
         </a>

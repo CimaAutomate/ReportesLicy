@@ -32,13 +32,12 @@ export class ReportViewerComponent {
 
 
   ngOnInit() {
-    console.log('report viewer init');
     this.route.paramMap.subscribe(params => {
       let reportUrl = params.get('reporte');
       
       this.selectedReport = this.reportes.find(x => x.link == reportUrl);
 
-      // Si no se encuentra el reporte, mostrar un error
+      console.log('report viewer init 2');
       if (!this.selectedReport) {
         this.navigateToDefault();
       }
