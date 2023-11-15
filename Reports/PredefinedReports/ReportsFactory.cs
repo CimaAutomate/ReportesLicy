@@ -12,7 +12,8 @@ namespace Reports.PredefinedReports
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>()
         {
             ["TestReport"] = () => new TestReport(),
-            ["ImpresionesPorMunicipioReport"] = () => new ImpresionesPorMunicipioReport()
+            ["ImpresionesPorMunicipioReport"] = () => new ImpresionesPorMunicipioReport(),
+            ["ImpresionesPorMunicipioFechaReport"] = () => new ImpresionesPorMunicipioFechaReport()
         };
     }
 }

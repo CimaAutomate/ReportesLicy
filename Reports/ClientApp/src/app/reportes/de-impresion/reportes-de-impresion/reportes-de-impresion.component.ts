@@ -8,5 +8,5 @@ import ReporteLink from '../../../Base/ReporteLink';
 })
 export class ReportesDeImpresionComponent {
   reportsParentRoute:string = '/impresion';
-  reportes:ReporteLink[] = [ new ReporteLink('ImpresionesPorMunicipioReport', 'Por municipio'), new ReporteLink('TestReport', 'test')];
+  reportes:ReporteLink[] = [ new ReporteLink('ImpresionesPorMunicipioReport', 'Por municipio'), new ReporteLink('ImpresionesPorMunicipioFechaReport', 'Por municipio y fecha'), ];
 }
