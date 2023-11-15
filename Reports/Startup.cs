@@ -16,7 +16,6 @@ using Microsoft.EntityFrameworkCore;
 using Reports.Services;
 using Reports.Data;
 using System.Reflection;
-using DataSource.Common.Attributes;
 using DataSource.Datasources.Impresiones;
 
 namespace Reports {
@@ -129,37 +128,8 @@ namespace Reports {
 
         public static void RegisterAllSafeReportDataSources()
         {
-            // Obtener todos los ensamblados cargados (puedes ajustar esto para escanear solo los ensamblados que necesites)
-            Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();
-
-            foreach (var assembly in assemblies)
-            {
-                // Obtener todas las clases en el ensamblado
-                Type[] types;
-                try
-                {
-                    types = assembly.GetTypes();
-                }
-                catch (ReflectionTypeLoadException e)
-                {
-                    types = e.Types;
-                }
-
-                // Buscar clases con el atributo SafeReportDataSource
-                foreach (var type in types)
-                {
-                    if (type == null) continue;
-
-                    var attributes = type.GetCustomAttributes(typeof(ReportDataSource), false);
-
-                    // Si la clase tiene el atributo SafeReportDataSource, registrala como confiable
-                    if (attributes != null && attributes.Length > 0)
-                    {
-                        DevExpress.Utils.DeserializationSettings.RegisterTrustedClass(typeof(ImpresionesPorMunicipioDataSource));
-                    }
-                }
-            }
-
+            DevExpress.Utils.DeserializationSettings.RegisterTrustedAssembly(typeof(ImpresionesPorMunicipioFechaDataSource).Assembly);
+            
         }
 
     }

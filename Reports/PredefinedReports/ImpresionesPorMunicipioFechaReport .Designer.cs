@@ -29,11 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo objectConstructorInfo1 = new DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter1 = new DevExpress.DataAccess.ObjectBinding.Parameter();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter2 = new DevExpress.DataAccess.ObjectBinding.Parameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImpresionesPorMunicipioFechaReport));
-            this.ImpresionesPorMunicipio = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
+            this.ImpresionesPorMunicipioFecha = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.startDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.endDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -81,26 +80,25 @@
             this.TableCell = new DevExpress.XtraReports.UI.XRControlStyle();
             this.ParamLabel = new DevExpress.XtraReports.UI.XRControlStyle();
             this.ParamValue = new DevExpress.XtraReports.UI.XRControlStyle();
-            ((System.ComponentModel.ISupportInitialize)(this.ImpresionesPorMunicipio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImpresionesPorMunicipioFecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
-            // ImpresionesPorMunicipio
+            // ImpresionesPorMunicipioFecha
             // 
-            this.ImpresionesPorMunicipio.Constructor = objectConstructorInfo1;
-            this.ImpresionesPorMunicipio.DataMember = "GetData";
-            this.ImpresionesPorMunicipio.DataSource = typeof(global::DataSource.Datasources.Impresiones.ImpresionesPorMunicipioDataSource);
-            this.ImpresionesPorMunicipio.Name = "ImpresionesPorMunicipio";
+            this.ImpresionesPorMunicipioFecha.DataMember = "GetData";
+            this.ImpresionesPorMunicipioFecha.DataSource = typeof(global::DataSource.Datasources.Impresiones.ImpresionesPorMunicipioFechaDataSource);
+            this.ImpresionesPorMunicipioFecha.Name = "ImpresionesPorMunicipioFecha";
             parameter1.Name = "startDate";
             parameter1.Type = typeof(global::DevExpress.DataAccess.Expression);
             parameter1.Value = new DevExpress.DataAccess.Expression("?startDate", typeof(System.DateTime));
             parameter2.Name = "endDate";
             parameter2.Type = typeof(global::DevExpress.DataAccess.Expression);
             parameter2.Value = new DevExpress.DataAccess.Expression("?endDate", typeof(System.DateTime));
-            this.ImpresionesPorMunicipio.Parameters.AddRange(new DevExpress.DataAccess.ObjectBinding.Parameter[] {
+            this.ImpresionesPorMunicipioFecha.Parameters.AddRange(new DevExpress.DataAccess.ObjectBinding.Parameter[] {
             parameter1,
             parameter2});
             // 
@@ -170,10 +168,10 @@
             this.label1.Font = new DevExpress.Drawing.DXFont("Arial", 20F);
             this.label1.LocationFloat = new DevExpress.Utils.PointFloat(159.1667F, 2.5F);
             this.label1.Name = "label1";
-            this.label1.SizeF = new System.Drawing.SizeF(336.2187F, 54.02507F);
+            this.label1.SizeF = new System.Drawing.SizeF(336.2187F, 91.66673F);
             this.label1.StylePriority.UseFont = false;
             this.label1.StylePriority.UseTextAlignment = false;
-            this.label1.Text = "Impresiones por municipio";
+            this.label1.Text = "Impresiones por municipio y fecha";
             this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // GroupHeader3
@@ -618,9 +616,10 @@
             this.GroupHeader1,
             this.PageHeader});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
-            this.ImpresionesPorMunicipio});
-            this.DataSource = this.ImpresionesPorMunicipio;
+            this.ImpresionesPorMunicipioFecha});
+            this.DataSource = this.ImpresionesPorMunicipioFecha;
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
+            this.Margins = new DevExpress.Drawing.DXMargins(100F, 98F, 100F, 100F);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.startDate,
             this.endDate});
@@ -638,7 +637,7 @@
             this.ParamLabel,
             this.ParamValue});
             this.Version = "23.1";
-            ((System.ComponentModel.ISupportInitialize)(this.ImpresionesPorMunicipio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ImpresionesPorMunicipioFecha)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).EndInit();
@@ -648,7 +647,7 @@
         }
 
         #endregion
-        private DevExpress.DataAccess.ObjectBinding.ObjectDataSource ImpresionesPorMunicipio;
+        private DevExpress.DataAccess.ObjectBinding.ObjectDataSource ImpresionesPorMunicipioFecha;
         private DevExpress.XtraReports.Parameters.Parameter startDate;
         private DevExpress.XtraReports.Parameters.Parameter endDate;
         private DevExpress.XtraReports.UI.TopMarginBand TopMargin;

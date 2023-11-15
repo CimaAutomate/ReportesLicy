@@ -1,12 +1,10 @@
-﻿using DataSource.Common.Attributes;
-using DataSource.Models;
+﻿using DataSource.Models;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace DataSource.Datasources.Impresiones
 {
-    [ReportDataSource]
     public class ImpresionesPorMunicipioFechaDataSource 
     {
         public List<ImpresionesPorMunicipioFecha> GetData(DateTime startDate, DateTime endDate)
