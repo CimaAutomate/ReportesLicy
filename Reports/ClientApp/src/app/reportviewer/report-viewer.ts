@@ -25,8 +25,8 @@ export class ReportViewerComponent {
 
 
     constructor(@Inject('BASE_URL') hostUrl: string, private route: ActivatedRoute, private router: Router) {
-      console.log('report viewer lodaded');
-        this.hostUrl = environment.API_URL;
+        //this.hostUrl = environment.API_URL;
+        this.hostUrl = hostUrl;
     }
 
 
