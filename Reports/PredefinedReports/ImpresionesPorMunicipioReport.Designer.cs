@@ -142,6 +142,7 @@
             this.xrPictureBox1,
             this.pageInfo1,
             this.label1});
+            this.ReportHeader.Expanded = false;
             this.ReportHeader.HeightF = 104.1667F;
             this.ReportHeader.Name = "ReportHeader";
             // 
@@ -413,6 +414,7 @@
             this.xrLabel3,
             this.xrLabel2,
             this.xrLabel1});
+            this.PageHeader.Expanded = false;
             this.PageHeader.HeightF = 24.16669F;
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.StyleName = "ParamLabel";

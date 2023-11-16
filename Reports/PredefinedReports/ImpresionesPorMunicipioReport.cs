@@ -11,6 +11,8 @@ namespace LicyReportingSystem.Reports
 
             startDate.Value = DateTime.Now;
             endDate.Value = DateTime.Now;
+
+
         }
     }
 }

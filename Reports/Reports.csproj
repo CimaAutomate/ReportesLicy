@@ -46,9 +46,6 @@
     <ProjectReference Include="..\DataSource\DataSource.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="PredefinedReports\ImpresionesPorMunicipioFechaReport .cs">
-      <SubType>XtraReport</SubType>
-    </Compile>
     <Compile Update="PredefinedReports\ImpresionesPorMunicipioReport.cs">
       <SubType>XtraReport</SubType>
     </Compile>

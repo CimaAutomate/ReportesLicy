@@ -18,6 +18,7 @@ export class AppComponent {
 
   toggle() {
     this.isExpanded = !this.isExpanded;
+    this.isOpened = !this.isOpened;
   }
 
   navigation: any;

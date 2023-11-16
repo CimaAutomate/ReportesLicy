@@ -1,7 +1,10 @@
 
 <nav
-  class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow upper-nav"
+  class="navbar navbar-expand-sm navbar-toggleable-sm  box-shadow upper-nav"
 >
+<button class="menu-button" class="menu-button" (click)="toggle()">
+  <span class="dx-icon-menu"></span> <!-- Icono de menú de DevExpress -->
+</button>
 
     <h3 class="logo-text">Reportes</h3>
 </nav>
@@ -13,7 +16,7 @@
   template="template"
   [(opened)]="isOpened"
   openedStateMode = "shrink"
-  revealMode="expand"
+  revealMode="slide"
 
 >
 <div *dxTemplate="let data of 'template'">

@@ -16,6 +16,8 @@
     --texto-atenuado: var(--light-purple); /* Texto menos prominente o atenuado */
     --texto-activo: var(--medium-purple); /* Texto activo o destacado */
 
+    --cuerpo-activo: var(--medium-purpl); /* Texto normal o cuerpo */
+
     /* Detalles y Decoración */
     --detalle-color: var(--dark-blue); /* Color para detalles como íconos o elementos pequeños */
     

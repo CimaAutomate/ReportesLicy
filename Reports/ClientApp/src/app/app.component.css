@@ -3,6 +3,10 @@ a.navbar-brand {
     text-align: center;
     word-break: break-all;
   }
+
+  .navbar{
+    padding: 0.5rem;
+  }
   
   html {
     font-size: 14px;
@@ -12,10 +16,17 @@ a.navbar-brand {
       font-size: 16px;
     }
   }
+
+  ::ng-deep .dx-drawer-panel-content{
+    background: #fcfcfc;
+    border-right: 1px solid var(--borde-color);
+    box-shadow:10px 0 5px -5px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+  }
   
 
   .box-shadow {
-    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .5);
     
   }
 
@@ -119,12 +130,7 @@ a.navbar-brand {
     font-size: 26px;
   }
   
-  ::ng-deep .dx-drawer-panel-content{
-    background: white;
-    border-right: 1px solid var(--borde-color);
-    box-shadow:10px 0 5px -5px rgba(0, 0, 0, 0.1);
 
-  }
 
   .side-title{
     padding-left:16px;
@@ -141,3 +147,32 @@ a.navbar-brand {
     margin-right: 10px;
   }
 
+
+  .menu-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 15%; /* Hace el botón redondo */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.5rem;
+
+}
+
+  .dx-icon-menu {
+      font-size: 30px; /* Ajusta el tamaño del icono */
+  }
+
+  .menu-button:hover {
+      background-color: rgba(255, 255, 255, 0.1); /* Color de fondo al hacer hover o active */
+      outline: none; /* Elimina el contorno predeterminado en foco */
+  }
+
+   .menu-button:active {
+    background-color: var(--cuerpo-activo); /* Color de fondo al hacer hover o active */
+    outline: none; /* Elimina el contorno predeterminado en foco */
+
+
+   }
