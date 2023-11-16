@@ -7,7 +7,7 @@ namespace DataSource.Datasources.Impresiones
 {
     public class ImpresionesPorMunicipioDataSource 
     {
-        public List<ImpresionesPorMunicipio> GetData(DateTime startDate, DateTime endDate)
+        public List<ImpresionesPorMunicipio> GetData(DateTime startDate, DateTime endDate, int municipioID)
         {
             return GenerateDummyData();
         }
@@ -27,23 +27,22 @@ namespace DataSource.Datasources.Impresiones
                 {
 
                     // Municipio 1, 4 registros
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 100, FechaDeCaptura = fechaCaptrua1, FechaDePago = fechaPago1 },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 150, FechaDeCaptura = fechaCaptrua1, FechaDePago = fechaPago1 },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 200, FechaDeCaptura = fechaCaptrua2, FechaDePago = fechaPago2 },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 250, FechaDeCaptura = fechaCaptrua2, FechaDePago = fechaPago2
-    },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 100 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 150 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 200 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 1", Impresiones = 250 },
 
                     // Municipio 2, 4 registros
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 300, FechaDeCaptura = fechaCaptrua1, FechaDePago = fechaPago1 },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 350, FechaDeCaptura = fechaCaptrua2, FechaDePago = fechaPago1 },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 400, FechaDeCaptura = fechaCaptrua3, FechaDePago = fechaPago2 },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 450, FechaDeCaptura = fechaCaptrua4, FechaDePago = fechaPago2 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 300 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 350 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 400 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 2", Impresiones = 450 },
 
                     // Municipio 3, 4 registros
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 500, FechaDeCaptura = fechaCaptrua1, FechaDePago = fechaPago1 },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 550, FechaDeCaptura = fechaCaptrua2, FechaDePago = fechaPago1 },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 600, FechaDeCaptura = fechaCaptrua3, FechaDePago = fechaPago2 },
-                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 650, FechaDeCaptura = fechaCaptrua4, FechaDePago = fechaPago2 }
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 500 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 550 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 600 },
+                    new ImpresionesPorMunicipio { Municipio = "Municipio 3", Impresiones = 650 }
                 };
 
                         return listaImpresiones;

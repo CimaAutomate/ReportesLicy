@@ -7,7 +7,7 @@ namespace DataSource.Datasources.Impresiones
 {
     public class ImpresionesPorMunicipioFechaDataSource 
     {
-        public List<ImpresionesPorMunicipioFecha> GetData(DateTime startDate, DateTime endDate)
+        public List<ImpresionesPorMunicipioFecha> GetData(DateTime startDate, DateTime endDate, int municipioID)
         {
             return GenerateDummyData();
         }

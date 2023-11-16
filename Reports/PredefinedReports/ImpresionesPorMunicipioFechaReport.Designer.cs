@@ -29,10 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImpresionesPorMunicipioFechaReport));
             DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo objectConstructorInfo1 = new DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImpresionesPorMunicipioFechaReport));
+            DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo objectConstructorInfo2 = new DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter1 = new DevExpress.DataAccess.ObjectBinding.Parameter();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter2 = new DevExpress.DataAccess.ObjectBinding.Parameter();
+            DevExpress.DataAccess.ObjectBinding.Parameter parameter3 = new DevExpress.DataAccess.ObjectBinding.Parameter();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            this.MunicipiosCatalog = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -67,10 +71,19 @@
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.TableColumn = new DevExpress.XtraReports.UI.XRControlStyle();
             this.TableCell = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.municipioParemeter = new DevExpress.XtraReports.Parameters.Parameter();
+            ((System.ComponentModel.ISupportInitialize)(this.MunicipiosCatalog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImpresionesPorMunicipioFecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // MunicipiosCatalog
+            // 
+            this.MunicipiosCatalog.Constructor = objectConstructorInfo1;
+            this.MunicipiosCatalog.DataMember = "GetAll";
+            this.MunicipiosCatalog.DataSource = typeof(global::DataSource.Repositories.MunicipiosRepository);
+            this.MunicipiosCatalog.Name = "MunicipiosCatalog";
             // 
             // Detail
             // 
@@ -193,7 +206,7 @@
             this.xrLabel3,
             this.xrLabel2,
             this.xrLabel1});
-            this.PageHeader.HeightF = 24.16669F;
+            this.PageHeader.HeightF = 23F;
             this.PageHeader.Name = "PageHeader";
             // 
             // xrPictureBox1
@@ -298,18 +311,20 @@
             // startDate
             // 
             this.startDate.AllowNull = true;
+            this.startDate.Description = "Fecha de fin";
             this.startDate.Name = "startDate";
             this.startDate.Type = typeof(global::System.DateTime);
             // 
             // endDate
             // 
             this.endDate.AllowNull = true;
+            this.endDate.Description = "Fecha de inicio";
             this.endDate.Name = "endDate";
             this.endDate.Type = typeof(global::System.DateTime);
             // 
             // ImpresionesPorMunicipioFecha
             // 
-            this.ImpresionesPorMunicipioFecha.Constructor = objectConstructorInfo1;
+            this.ImpresionesPorMunicipioFecha.Constructor = objectConstructorInfo2;
             this.ImpresionesPorMunicipioFecha.DataMember = "GetData";
             this.ImpresionesPorMunicipioFecha.DataSource = typeof(global::DataSource.Datasources.Impresiones.ImpresionesPorMunicipioFechaDataSource);
             this.ImpresionesPorMunicipioFecha.Name = "ImpresionesPorMunicipioFecha";
@@ -319,9 +334,13 @@
             parameter2.Name = "endDate";
             parameter2.Type = typeof(global::DevExpress.DataAccess.Expression);
             parameter2.Value = new DevExpress.DataAccess.Expression("?endDate", typeof(System.DateTime));
+            parameter3.Name = "municipioID";
+            parameter3.Type = typeof(global::DevExpress.DataAccess.Expression);
+            parameter3.Value = new DevExpress.DataAccess.Expression("?municipioParemeter", typeof(int));
             this.ImpresionesPorMunicipioFecha.Parameters.AddRange(new DevExpress.DataAccess.ObjectBinding.Parameter[] {
             parameter1,
-            parameter2});
+            parameter2,
+            parameter3});
             // 
             // GroupHeader1
             // 
@@ -424,6 +443,20 @@
             this.TableCell.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.TableCell.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
+            // municipioParemeter
+            // 
+            this.municipioParemeter.AllowNull = true;
+            this.municipioParemeter.Description = "Municipio";
+            this.municipioParemeter.Name = "municipioParemeter";
+            this.municipioParemeter.Type = typeof(int);
+            dynamicListLookUpSettings1.DataMember = null;
+            dynamicListLookUpSettings1.DataSource = this.MunicipiosCatalog;
+            dynamicListLookUpSettings1.DisplayMember = "Nombre";
+            dynamicListLookUpSettings1.FilterString = null;
+            dynamicListLookUpSettings1.SortMember = null;
+            dynamicListLookUpSettings1.ValueMember = "IdMunicipio";
+            this.municipioParemeter.ValueSourceSettings = dynamicListLookUpSettings1;
+            // 
             // ImpresionesPorMunicipioFechaReport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -436,11 +469,17 @@
             this.GroupHeader1,
             this.GroupHeader2});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
-            this.ImpresionesPorMunicipioFecha});
+            this.ImpresionesPorMunicipioFecha,
+            this.MunicipiosCatalog});
             this.DataSource = this.ImpresionesPorMunicipioFecha;
+            this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.startDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.endDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.municipioParemeter, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.startDate,
-            this.endDate});
+            this.endDate,
+            this.municipioParemeter});
             this.RequestParameters = false;
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.GroupTitle1,
@@ -448,6 +487,7 @@
             this.TableColumn,
             this.TableCell});
             this.Version = "22.2";
+            ((System.ComponentModel.ISupportInitialize)(this.MunicipiosCatalog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ImpresionesPorMunicipioFecha)).EndInit();
@@ -491,5 +531,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRControlStyle TableColumn;
         private DevExpress.XtraReports.UI.XRControlStyle TableCell;
+        private DevExpress.XtraReports.Parameters.Parameter municipioParemeter;
+        private DevExpress.DataAccess.ObjectBinding.ObjectDataSource MunicipiosCatalog;
     }
 }

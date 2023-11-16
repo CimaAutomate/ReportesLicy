@@ -17,6 +17,8 @@ using Reports.Services;
 using Reports.Data;
 using System.Reflection;
 using DataSource.Datasources.Impresiones;
+using Microsoft.AspNetCore.Localization;
+using System.Globalization;
 
 namespace Reports {
     public class Startup {
@@ -46,6 +48,7 @@ namespace Reports {
 
 
             });
+
 
             services.AddCors(options => {
                 options.AddPolicy(name: "AllowAll",
