@@ -3,6 +3,12 @@ import { environment } from '../../environments/environment';
 import { ActivatedRoute, Router } from '@angular/router';
 import ReporteLink from '../Base/ReporteLink';
 
+
+import deMessages from "devextreme/localization/messages/es.json";
+import { locale, loadMessages } from "devextreme/localization";
+
+
+
 @Component({
   selector: 'report-viewer',
   encapsulation: ViewEncapsulation.None,
@@ -28,6 +34,9 @@ export class ReportViewerComponent {
         this.hostUrl = environment.API_URL;
         //this.hostUrl = hostUrl;
         console.log(this.hostUrl);
+
+        loadMessages(deMessages);
+        locale(navigator.language);
     }
 
 
