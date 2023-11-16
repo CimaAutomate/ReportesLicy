@@ -46,11 +46,6 @@
     <ProjectReference Include="..\DataSource\DataSource.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="PredefinedReports\ImpresionesPorMunicipioReport.cs">
-      <SubType>XtraReport</SubType>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Content Update="Data\nwind.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

@@ -5,7 +5,7 @@ namespace DataSource.Datasources.Impresiones
 {
     public class ImpresionesPorMunicipioTipoTramiteDataSource
     {
-        public List<ImpresionesPorMunicipioTipoTramite> GetImpresionesPorMunicipioTipoTramite()
+        public List<ImpresionesPorMunicipioTipoTramite> GetImpresionesPorMunicipioTipoTramite(DateTime startDate, DateTime endDate, int municipioID, int tipoTramiteID)
         {
            return GetDummyData();
         }

@@ -13,7 +13,8 @@ namespace Reports.PredefinedReports
         {
             ["TestReport"] = () => new TestReport(),
             ["ImpresionesPorMunicipioReport"] = () => new ImpresionesPorMunicipioReport(),
-            ["ImpresionesPorMunicipioFechaReport"] = () => new ImpresionesPorMunicipioFechaReport()
+            ["ImpresionesPorMunicipioFechaReport"] = () => new ImpresionesPorMunicipioFechaReport(),
+            ["ImpresionesPorMunicipioTipoTramiteReport"] = () => new ImpresionesPorMunicipioTipoTramiteReport()
         };
     }
 }
