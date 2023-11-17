@@ -276,7 +276,7 @@
             this.label1.SizeF = new System.Drawing.SizeF(336.2187F, 91.6667F);
             this.label1.StylePriority.UseFont = false;
             this.label1.StylePriority.UseTextAlignment = false;
-            this.label1.Text = "Impresiones por municipio, vigencia y fecha";
+            this.label1.Text = "Impresiones por modulo y trámite";
             this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // GroupHeader4
