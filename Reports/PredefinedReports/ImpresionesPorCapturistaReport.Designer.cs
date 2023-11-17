@@ -30,14 +30,15 @@
         {
             this.components = new System.ComponentModel.Container();
             DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo objectConstructorInfo1 = new DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo();
+            DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo objectConstructorInfo2 = new DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImpresionesPorCapturistaReport));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo objectConstructorInfo2 = new DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter1 = new DevExpress.DataAccess.ObjectBinding.Parameter();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter2 = new DevExpress.DataAccess.ObjectBinding.Parameter();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter3 = new DevExpress.DataAccess.ObjectBinding.Parameter();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter4 = new DevExpress.DataAccess.ObjectBinding.Parameter();
+            this.MunicipiosCatalog = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.CapturistasCatalog = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
@@ -73,18 +74,24 @@
             this.endDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.municipioParemeter = new DevExpress.XtraReports.Parameters.Parameter();
             this.CapturistaParam = new DevExpress.XtraReports.Parameters.Parameter();
-            this.MunicipiosCatalog = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.MainDatasource = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.MunicipiosCatalog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CapturistasCatalog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MunicipiosCatalog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainDatasource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
+            // MunicipiosCatalog
+            // 
+            this.MunicipiosCatalog.Constructor = objectConstructorInfo1;
+            this.MunicipiosCatalog.DataMember = "GetAll";
+            this.MunicipiosCatalog.DataSource = typeof(global::DataSource.Repositories.MunicipiosRepository);
+            this.MunicipiosCatalog.Name = "MunicipiosCatalog";
+            // 
             // CapturistasCatalog
             // 
-            this.CapturistasCatalog.Constructor = objectConstructorInfo1;
+            this.CapturistasCatalog.Constructor = objectConstructorInfo2;
             this.CapturistasCatalog.DataMember = "GetCapturistas";
             this.CapturistasCatalog.DataSource = typeof(global::DataSource.Repositories.CapturistaRepository);
             this.CapturistasCatalog.Name = "CapturistasCatalog";
@@ -250,7 +257,7 @@
             this.label1.SizeF = new System.Drawing.SizeF(336.2187F, 91.6667F);
             this.label1.StylePriority.UseFont = false;
             this.label1.StylePriority.UseTextAlignment = false;
-            this.label1.Text = "Impresiones por municipio, vigencia y fecha";
+            this.label1.Text = "Impresiones por capturista";
             this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // GroupHeader4
@@ -445,16 +452,9 @@
             dynamicListLookUpSettings2.ValueMember = "IdUsuario";
             this.CapturistaParam.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
-            // MunicipiosCatalog
-            // 
-            this.MunicipiosCatalog.Constructor = objectConstructorInfo2;
-            this.MunicipiosCatalog.DataMember = "GetAll";
-            this.MunicipiosCatalog.DataSource = typeof(global::DataSource.Repositories.MunicipiosRepository);
-            this.MunicipiosCatalog.Name = "MunicipiosCatalog";
-            // 
             // MainDatasource
             // 
-            this.MainDatasource.Constructor = objectConstructorInfo2;
+            this.MainDatasource.Constructor = objectConstructorInfo1;
             this.MainDatasource.DataMember = "GetData";
             this.MainDatasource.DataSource = typeof(global::DataSource.Datasources.Impresiones.ImpresionesPorCapturistaDatasource);
             this.MainDatasource.Name = "MainDatasource";
@@ -510,10 +510,10 @@
             this.GroupTitle,
             this.GroupTitle3});
             this.Version = "22.2";
+            ((System.ComponentModel.ISupportInitialize)(this.MunicipiosCatalog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CapturistasCatalog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.MunicipiosCatalog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainDatasource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
