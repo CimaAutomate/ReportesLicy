@@ -114,7 +114,7 @@
             // xrTableCell3
             // 
             this.xrTableCell3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FechaDePago]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FechaDeCaptura]")});
             this.xrTableCell3.Multiline = true;
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.StyleName = "TableCell";
@@ -419,7 +419,7 @@
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel7.SizeF = new System.Drawing.SizeF(325F, 23F);
             this.xrLabel7.StyleName = "TableColumn";
-            this.xrLabel7.Text = "Fecha de pago";
+            this.xrLabel7.Text = "Fecha de captura";
             // 
             // TableColumn
             // 
