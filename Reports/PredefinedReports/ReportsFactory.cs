@@ -15,7 +15,8 @@ namespace Reports.PredefinedReports
             ["ImpresionesPorMunicipioFechaReport"] = () => new ImpresionesPorMunicipioFechaReport(),
             ["ImpresionesPorMunicipioTipoTramiteReport"] = () => new ImpresionesPorMunicipioTipoTramiteReport(),
             ["ImpresionesPorMunicipioFechaTipoReport"] = () => new ImpresionesPorMunicipioFechaTipoReport(),
-            ["ImpresionesMunicipioTipoLicenciaFecha"] = () => new ImpresionesMunicipioTipoLicenciaFecha()
+            ["ImpresionesMunicipioTipoLicenciaFecha"] = () => new ImpresionesMunicipioTipoLicenciaFecha(),
+            ["ImpresionesMunicipioSexoFechaReport"] = () => new ImpresionesMunicipioSexoFechaReport()
         };
 
     }

@@ -10,7 +10,7 @@ namespace DataSource.Datasources.Impresiones
     public class ImpresionesMunicipioSexoFechaDataSource
     {
         
-        public List<ImpresionesMunicipioSexoFechaModel> GetData(DateTime fechaInicio, DateTime fechaFin, int municipioID, int TipoID)
+        public List<ImpresionesMunicipioSexoFechaModel> GetData(DateTime fechaInicio, DateTime fechaFin, int municipioID, int idSexo)
         {
             return GetDummyData();
         }
