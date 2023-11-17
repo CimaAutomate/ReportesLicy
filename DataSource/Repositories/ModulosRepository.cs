@@ -1,6 +1,6 @@
 ﻿using DataSource.Entities;
 
-+using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,7 +12,7 @@ namespace DataSource.Repositories
     {
         public List<Modulo> GetModulos()
         {
-
+            return GetDummy();
         }
 
         private List<Modulo> GetDummy()

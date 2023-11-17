@@ -18,5 +18,6 @@ export class ReportesDeImpresionComponent {
     new ReporteLink('ImpresionesPorCapturistaReport', 'Por capturista'),
     new ReporteLink('ImpresionesMunicipioVigenciaFechaReport', 'Municipio, vigencia y fecha'),
     new ReporteLink('ImpresionesMunicipioCapturistaSinHuella', 'Municipio, capturista y sin huella'),
+    new ReporteLink('ImpresionesModuloModelReport', ' Por módulo y modelo'),
   ];
 }
