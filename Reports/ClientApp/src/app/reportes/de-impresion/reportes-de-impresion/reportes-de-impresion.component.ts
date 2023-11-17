@@ -11,5 +11,7 @@ export class ReportesDeImpresionComponent {
   reportes:ReporteLink[] = [
     new ReporteLink('ImpresionesPorMunicipioReport', 'Por municipio'), 
     new ReporteLink('ImpresionesPorMunicipioFechaReport', 'Por municipio y fecha'),
-    new ReporteLink('ImpresionesPorMunicipioTipoTramiteReport', 'Por municipio y tipo'), ];
+    new ReporteLink('ImpresionesPorMunicipioTipoTramiteReport', 'Por municipio y tipo'), 
+    new ReporteLink('ImpresionesPorMunicipioFechaTipoReport', 'Por municipio, fecha y tipo'),
+  ];
 }

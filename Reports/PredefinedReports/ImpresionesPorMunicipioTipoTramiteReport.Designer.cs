@@ -382,7 +382,6 @@
             this.Municipio.AllowNull = true;
             this.Municipio.Name = "Municipio";
             this.Municipio.Type = typeof(int);
-            this.Municipio.ValueInfo = "0";
             dynamicListLookUpSettings1.DataMember = null;
             dynamicListLookUpSettings1.DataSource = this.MunicipiosCatalog;
             dynamicListLookUpSettings1.DisplayMember = "Nombre";
