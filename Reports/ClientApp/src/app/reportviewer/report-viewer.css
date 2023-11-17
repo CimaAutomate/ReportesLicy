@@ -1,0 +1,58 @@
+/* Estilos existentes... */
+
+.sidebar li a {
+    color: grey; /* Color por defecto */
+    /* Resto de los estilos */
+  }
+  
+  .sidebar li a.active {
+    color: var(--texto-activo); /* Color para el enlace activo */
+    background-color: #f0f0f0;
+
+  }
+
+  /* Estilos para la sidebar y el contenido del reporte */
+.report-viewer-container {
+    display: flex;
+  }
+  
+  .sidebar {
+    padding: 1rem;
+    width: 300px; /* Ajustar según sea necesario */
+    border-right: 1px solid var(--borde-color);
+    box-shadow:10px 0 5px -5px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+
+  }
+  
+  .sidebar ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .sidebar li a {
+    display: flex;
+    align-items: center;
+    padding: 0px 0.5rem;
+    text-decoration: none;
+    color: var(--texto-atenuado);
+    font-size: 1.1rem;
+    padding: 0.5rem;
+
+  }
+  
+  .sidebar li a:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .dx-icon-report {
+    margin-right: 10px;
+  }
+  
+  .report-content {
+    flex-grow: 1;
+  }
+  
+  .link-icon {
+    margin-right: 10px;
+  }
