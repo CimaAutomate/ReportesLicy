@@ -30,4 +30,5 @@ namespace DataSource.Entities
 
         public bool HasAuthFingerPrint { get; set; }
 
+    }
 }
