@@ -35,7 +35,44 @@ namespace DataSource.Datasources.Impresiones
                     Capturista = "Capturista 1",
                     Impresiones = 350,
                     Municipio = "Municipio 3",
+                },
+                                new ImpresionesPorCapturistaModel
+                {
+                    Capturista = "Capturista 2",
+                    Impresiones = 250,
+                    Municipio = "Municipio 1",
+                },
+                new ImpresionesPorCapturistaModel
+                {
+                    Capturista = "Capturista 2",
+                    Impresiones = 300,
+                    Municipio = "Municipio 2",
+                },
+                new ImpresionesPorCapturistaModel
+                {
+                    Capturista = "Capturista 2",
+                    Impresiones = 350,
+                    Municipio = "Municipio 3",
+                },
+                                new ImpresionesPorCapturistaModel
+                {
+                    Capturista = "Capturista 3",
+                    Impresiones = 250,
+                    Municipio = "Municipio 1",
+                },
+                new ImpresionesPorCapturistaModel
+                {
+                    Capturista = "Capturista 3",
+                    Impresiones = 300,
+                    Municipio = "Municipio 2",
+                },
+                new ImpresionesPorCapturistaModel
+                {
+                    Capturista = "Capturista 3",
+                    Impresiones = 350,
+                    Municipio = "Municipio 3",
                 }
+
 
 
             };

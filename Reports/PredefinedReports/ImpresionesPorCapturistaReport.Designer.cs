@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo objectConstructorInfo1 = new DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ImpresionesPorCapturistaReport));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo objectConstructorInfo1 = new DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo objectConstructorInfo2 = new DevExpress.DataAccess.ObjectBinding.ObjectConstructorInfo();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter1 = new DevExpress.DataAccess.ObjectBinding.Parameter();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter2 = new DevExpress.DataAccess.ObjectBinding.Parameter();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter3 = new DevExpress.DataAccess.ObjectBinding.Parameter();
             DevExpress.DataAccess.ObjectBinding.Parameter parameter4 = new DevExpress.DataAccess.ObjectBinding.Parameter();
+            this.CapturistasCatalog = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.Detail = new DevExpress.XtraReports.UI.DetailBand();
             this.xrTable2 = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -71,16 +72,22 @@
             this.startDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.endDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.municipioParemeter = new DevExpress.XtraReports.Parameters.Parameter();
-            this.CapturistasCatalog = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.CapturistaParam = new DevExpress.XtraReports.Parameters.Parameter();
             this.MunicipiosCatalog = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
             this.MainDatasource = new DevExpress.DataAccess.ObjectBinding.ObjectDataSource(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.CapturistasCatalog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.table4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CapturistasCatalog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MunicipiosCatalog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainDatasource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // CapturistasCatalog
+            // 
+            this.CapturistasCatalog.Constructor = objectConstructorInfo1;
+            this.CapturistasCatalog.DataMember = "GetCapturistas";
+            this.CapturistasCatalog.DataSource = typeof(global::DataSource.Repositories.CapturistaRepository);
+            this.CapturistasCatalog.Name = "CapturistasCatalog";
             // 
             // Detail
             // 
@@ -111,7 +118,7 @@
             // xrTableCell3
             // 
             this.xrTableCell3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Nombre]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Capturista]")});
             this.xrTableCell3.Multiline = true;
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.StyleName = "TableCell";
@@ -419,17 +426,10 @@
             this.municipioParemeter.Description = "Municipio";
             this.municipioParemeter.Name = "municipioParemeter";
             this.municipioParemeter.Type = typeof(int);
-            dynamicListLookUpSettings1.DataSource = null;
+            dynamicListLookUpSettings1.DataSource = this.MunicipiosCatalog;
             dynamicListLookUpSettings1.DisplayMember = "Nombre";
             dynamicListLookUpSettings1.ValueMember = "IdMunicipio";
             this.municipioParemeter.ValueSourceSettings = dynamicListLookUpSettings1;
-            // 
-            // CapturistasCatalog
-            // 
-            this.CapturistasCatalog.Constructor = objectConstructorInfo1;
-            this.CapturistasCatalog.DataMember = "GetCapturistas";
-            this.CapturistasCatalog.DataSource = typeof(global::DataSource.Repositories.CapturistaRepository);
-            this.CapturistasCatalog.Name = "CapturistasCatalog";
             // 
             // CapturistaParam
             // 
@@ -490,7 +490,7 @@
             this.CapturistasCatalog,
             this.MunicipiosCatalog,
             this.MainDatasource});
-            this.DataSource = this.MunicipiosCatalog;
+            this.DataSource = this.MainDatasource;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.startDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.endDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -510,9 +510,9 @@
             this.GroupTitle,
             this.GroupTitle3});
             this.Version = "22.2";
+            ((System.ComponentModel.ISupportInitialize)(this.CapturistasCatalog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.table4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CapturistasCatalog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MunicipiosCatalog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.MainDatasource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
