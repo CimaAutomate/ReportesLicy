@@ -1,0 +1,35 @@
+
+<nav
+  class="navbar navbar-expand-sm navbar-toggleable-sm  box-shadow upper-nav"
+>
+<button class="menu-button" class="menu-button" (click)="toggle()">
+  <span class="dx-icon-menu"></span> <!-- Icono de menú de DevExpress -->
+</button>
+
+    <h3 class="logo-text">Reportes</h3>
+</nav>
+
+
+
+<dx-drawer
+  class="drawer-custom"
+  template="template"
+  [(opened)]="isOpened"
+  openedStateMode = "shrink"
+  revealMode="slide"
+
+>
+<div *dxTemplate="let data of 'template'">
+  <h4 class="side-title" >Menú</h4>
+    <dx-list
+        [items]="navigation"
+        [selectedIndex]="0"
+        [width]="300"
+        selectionMode="single"
+        (onSelectionChanged)="loadView($event)">
+    </dx-list>
+    </div>
+      <div id="view">
+        <router-outlet></router-outlet>
+    </div>
+</dx-drawer>
