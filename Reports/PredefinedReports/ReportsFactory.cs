@@ -11,11 +11,11 @@ namespace Reports.PredefinedReports
     {
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>()
         {
-            ["TestReport"] = () => new TestReport(),
             ["ImpresionesPorMunicipioReport"] = () => new ImpresionesPorMunicipioReport(),
             ["ImpresionesPorMunicipioFechaReport"] = () => new ImpresionesPorMunicipioFechaReport(),
             ["ImpresionesPorMunicipioTipoTramiteReport"] = () => new ImpresionesPorMunicipioTipoTramiteReport(),
-            ["ImpresionesPorMunicipioFechaTipoReport"] = () => new ImpresionesPorMunicipioFechaTipoReport()
+            ["ImpresionesPorMunicipioFechaTipoReport"] = () => new ImpresionesPorMunicipioFechaTipoReport(),
+            ["ImpresionesMunicipioTipoLicenciaFecha"] = () => new ImpresionesMunicipioTipoLicenciaFecha()
         };
 
     }

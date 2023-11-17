@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataSource.DatasourceModels
 {
-    internal class ImpresionesMunicipioTipoLicenciaFechaModel
+    public class ImpresionesMunicipioTipoLicenciaFechaModel
     {
         public string Municipio { get; set; }
         public int Impresiones { get; set; }

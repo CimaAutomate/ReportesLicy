@@ -162,7 +162,7 @@
             this.label1.SizeF = new System.Drawing.SizeF(336.2187F, 91.66666F);
             this.label1.StylePriority.UseFont = false;
             this.label1.StylePriority.UseTextAlignment = false;
-            this.label1.Text = "Impresiones por municipio y tipo";
+            this.label1.Text = "Impresiones por municipio y tramite";
             this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // ReportHeader
@@ -264,7 +264,7 @@
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel6.SizeF = new System.Drawing.SizeF(100F, 23F);
             this.xrLabel6.StyleName = "TableColumn";
-            this.xrLabel6.Text = "Tipo";
+            this.xrLabel6.Text = "Tramite";
             // 
             // GroupHeader2
             // 

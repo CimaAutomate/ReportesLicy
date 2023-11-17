@@ -262,7 +262,7 @@
             this.label1.SizeF = new System.Drawing.SizeF(336.2187F, 91.6667F);
             this.label1.StylePriority.UseFont = false;
             this.label1.StylePriority.UseTextAlignment = false;
-            this.label1.Text = "Impresiones por municipio, tipo y fecha";
+            this.label1.Text = "Impresiones por municipio, tramite y fecha";
             this.label1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
             // 
             // GroupHeader4
@@ -427,21 +427,21 @@
             // 
             // startDate
             // 
-            this.startDate.AllowNull = true;
             this.startDate.Description = "Fecha de fin";
             this.startDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "now()")});
             this.startDate.Name = "startDate";
             this.startDate.Type = typeof(global::System.DateTime);
+            this.startDate.ValueInfo = "2023-11-16";
             // 
             // endDate
             // 
-            this.endDate.AllowNull = true;
             this.endDate.Description = "Fecha de inicio";
             this.endDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "now()")});
             this.endDate.Name = "endDate";
             this.endDate.Type = typeof(global::System.DateTime);
+            this.endDate.ValueInfo = "2023-11-16";
             // 
             // municipioParemeter
             // 
@@ -525,7 +525,7 @@
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel10.SizeF = new System.Drawing.SizeF(110F, 23F);
             this.xrLabel10.StyleName = "GroupTitle3";
-            this.xrLabel10.Text = "Tipo";
+            this.xrLabel10.Text = "Tramite";
             this.xrLabel10.TextFormatString = "{0:d}";
             // 
             // GroupTitle
