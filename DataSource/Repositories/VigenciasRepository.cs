@@ -41,7 +41,7 @@ namespace DataSource.Repositories
                   Monto = 3000,
 
                 },
-            }
+            };
 
         }
 
