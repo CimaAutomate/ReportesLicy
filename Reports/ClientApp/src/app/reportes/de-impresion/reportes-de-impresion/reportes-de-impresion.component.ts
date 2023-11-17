@@ -15,10 +15,7 @@ export class ReportesDeImpresionComponent {
     new ReporteLink('ImpresionesPorMunicipioFechaTipoReport', 'Por municipio, fecha y tipo'),
     new ReporteLink('ImpresionesMunicipioTipoLicenciaFecha',  'Municipio, licencia y fecha'),
     new ReporteLink('ImpresionesMunicipioSexoFechaReport', 'Municipio, género y fecha'),
-<<<<<<< HEAD
     new ReporteLink('ImpresionesPorCapturistaReport', 'Por capturista'),
-=======
     new ReporteLink('ImpresionesMunicipioVigenciaFechaReport', 'Municipio, vigencia y fecha'),
->>>>>>> d3e059d75a9ac11913e3828204b553a7e3996c9f
   ];
 }
